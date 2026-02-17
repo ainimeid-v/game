@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Ceria</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>🌈 Memory Ceria</h1>
+            <p class="subtitle">Latihan ingatan dengan cara menyenangkan</p>
+        </header>
+
+        <div class="menu" id="menu">
+            <button class="btn" onclick="startGame('easy')">Mudah 😊</button>
+            <button class="btn" onclick="startGame('medium')">Sedang 🙂</button>
+            <button class="btn" onclick="startGame('hard')">Sulit 💪</button>
+        </div>
+
+        <div class="game hidden" id="game">
+            <div class="info-bar">
+                <div>⏱ Waktu: <span id="timer">0</span></div>
+                <div>⭐ Skor: <span id="score">0</span></div>
+            </div>
+
+            <div class="board" id="board"></div>
+
+            <button class="btn back" onclick="goToMenu()">Kembali ke Menu</button>
+        </div>
+
+        <div class="result hidden" id="result">
+            <h2>🎉 Hebat!</h2>
+            <p id="finalMessage"></p>
+            <button class="btn" onclick="goToMenu()">Main Lagi</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="levels.js"></script>
+    <script src="sounds.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
